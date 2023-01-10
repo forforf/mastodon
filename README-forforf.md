@@ -48,6 +48,7 @@ The only way I've found so far is to modify `runtimePlatform` in the task defini
 
 ### Develop and Deploy the image to ECR Repo
 1. Standard rails development to change the code locally
+   1. Dev user: admin@localhost:3000 / mastodonadmin
 2. Run `docker compose build` which used `docker-compose.yml` to create the image `forforf/mastodon`
 3. Rename the image for the ECR repo: `docker image tag forforf/mastodon:latest 438378517892.dkr.ecr.us-east-2.amazonaws.com/mastodon:latest`
 4. Push the image to ECR: `docker image push 438378517892.dkr.ecr.us-east-2.amazonaws.com/mastodo`. Note: This may require logging in to the ECR repo first.
